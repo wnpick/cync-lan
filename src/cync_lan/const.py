@@ -108,14 +108,14 @@ else:
         CYNC_CMD_BROADCASTS = int(CYNC_CMD_BROADCASTS)
     except ValueError:
         CYNC_CMD_BROADCASTS = 2
-CYNC_MAX_TCP_CONN: int = os.environ.get("CYNC_MAX_TCP_CONN", 8)
+CYNC_MAX_TCP_CONN: int = os.environ.get("CYNC_MAX_TCP_CONN", 16)
 if not CYNC_MAX_TCP_CONN:
-    CYNC_MAX_TCP_CONN = 8
+    CYNC_MAX_TCP_CONN = 16
 else:
     try:
         CYNC_MAX_TCP_CONN = int(CYNC_MAX_TCP_CONN)
     except ValueError:
-        CYNC_MAX_TCP_CONN = 8
+        CYNC_MAX_TCP_CONN = 16
 CYNC_TCP_WHITELIST: Optional[Union[str, List[Optional[str]]]] = os.environ.get(
     "CYNC_TCP_WHITELIST"
 )
