@@ -100,14 +100,14 @@ CYNC_ACCOUNT_LANGUAGE: str = os.environ.get("CYNC_ACCOUNT_LANGUAGE", "en-us").ca
 CYNC_ACCOUNT_USERNAME: str = os.environ.get("CYNC_ACCOUNT_USERNAME", None)
 CYNC_ACCOUNT_PASSWORD: str = os.environ.get("CYNC_ACCOUNT_PASSWORD", None)
 
-CYNC_CMD_BROADCASTS: int = os.environ.get("CYNC_CMD_BROADCASTS", 2)
+CYNC_CMD_BROADCASTS: int = os.environ.get("CYNC_CMD_BROADCASTS", 4)
 if not CYNC_CMD_BROADCASTS:
-    CYNC_CMD_BROADCASTS = 2
+    CYNC_CMD_BROADCASTS = 4
 else:
     try:
         CYNC_CMD_BROADCASTS = int(CYNC_CMD_BROADCASTS)
     except ValueError:
-        CYNC_CMD_BROADCASTS = 2
+        CYNC_CMD_BROADCASTS = 4
 CYNC_MAX_TCP_CONN: int = os.environ.get("CYNC_MAX_TCP_CONN", 16)
 if not CYNC_MAX_TCP_CONN:
     CYNC_MAX_TCP_CONN = 16
