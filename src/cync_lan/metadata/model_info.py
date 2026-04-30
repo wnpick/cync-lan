@@ -356,7 +356,19 @@ device_type_map = {
         protocol=DeviceProtocol(TCP=True),
         capabilities=SwitchCapabilities(dimmable=True, color=True, tunable_white=True),
     ),
+    53: DeviceTypeInfo(
+        type=DeviceClassification.LIGHT,
+        model_name="Switch",
+        protocol=DeviceProtocol(TCP=True),
+        capabilities=SwitchCapabilities(dimmable=False),
+    ),
     55: DeviceTypeInfo(
+        type=DeviceClassification.LIGHT,
+        model_name="Dimmer Switch - No Neutral",
+        protocol=DeviceProtocol(TCP=True),
+        capabilities=SwitchCapabilities(dimmable=True, color=True, tunable_white=True),
+    ),
+    56: DeviceTypeInfo(
         type=DeviceClassification.LIGHT,
         model_name="Dimmer Switch - No Neutral",
         protocol=DeviceProtocol(TCP=True),
@@ -651,6 +663,12 @@ device_type_map = {
         model_name="Full Color Light (Unknown)",
         capabilities=LightCapabilities(tunable_white=True, color=True),
     ),
+    155: DeviceTypeInfo(
+        type=DeviceClassification.LIGHT,
+        protocol=DeviceProtocol(TCP=True),
+        model_name="Dynamic Effects A19 Bulb",
+        capabilities=LightCapabilities(tunable_white=True, color=True),
+    ),
     156: DeviceTypeInfo(
         type=DeviceClassification.LIGHT,
         protocol=DeviceProtocol(TCP=True),
@@ -710,6 +728,12 @@ device_type_map = {
         characteristics=LightCharacteristics(lumens=760),
         model_id="CFIXCNLR4CRVD",
         model_name="Reveal HD+ Full Color 4 Inch Wafer Downlight",
+        protocol=DeviceProtocol(TCP=True),
+        capabilities=LightCapabilities(tunable_white=True, color=True),
+    ),
+    170: DeviceTypeInfo(
+        type=DeviceClassification.LIGHT,
+        model_name="Full Color 4 Inch Wafer Downlight",
         protocol=DeviceProtocol(TCP=True),
         capabilities=LightCapabilities(tunable_white=True, color=True),
     ),
